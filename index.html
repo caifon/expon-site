@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expon | Crescimento Empresarial com IA e Automação</title>
+  <meta name="description" content="A Expon é a camada operacional inteligente que usa IA, automação e sistemas para fazer sua empresa crescer de forma estruturada e escalável.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <img src="logo.png" alt="Expon" class="logo">
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#como-funciona">Como Funciona</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#tecnologia">Tecnologia</a></li>
+  </ul>
+  <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Expon" class="nav-cta" id="nav-cta-btn">Falar com a Expon</a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay loop muted playsinline>
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Camada Operacional Inteligente
+    </div>
+    <h1>
+      Sua empresa <span class="gradient-text">mais rápida,</span><br>
+      organizada e eficiente.
+    </h1>
+    <p>
+      Integramos presença digital, automação e inteligência artificial para 
+      fazer seu negócio crescer de verdade. Sem complicação, com resultado.
+    </p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagnóstico%20gratuito" class="btn-primary" id="hero-cta-primary">
+        Diagnóstico Gratuito
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#tecnologia" class="btn-secondary" id="hero-cta-secondary">
+        Ver Tecnologia
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="container">
+  <div class="stats-bar reveal" id="stats-section">
+    <div class="stat-item">
+      <div class="stat-number" data-target="48" data-suffix="h">0h</div>
+      <div class="stat-label">Setup inicial</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="90" data-suffix="%">0%</div>
+      <div class="stat-label">Automação dos processos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="3" data-suffix="x">0x</div>
+      <div class="stat-label">Mais leads qualificados</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="24" data-suffix="/7">0/7</div>
+      <div class="stat-label">Atendimento ativo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services-section" id="servicos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Serviços</span>
+      <h2 class="section-title">Tudo que sua empresa precisa.<br><span class="gradient-text">Integrado.</span></h2>
+      <p class="section-subtitle">Não entregamos peças soltas. Entregamos um ecossistema que conecta captação, atendimento e análise.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1" id="service-landing">
+        <div class="service-icon">⚡</div>
+        <h3>Landing Pages de Conversão</h3>
+        <p>Páginas focadas em resultado, com cada elemento pensado para transformar visitante em contato.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2" id="service-automation">
+        <div class="service-icon">🤖</div>
+        <h3>Automação de Atendimento</h3>
+        <p>WhatsApp inteligente que qualifica leads, responde perguntas e agenda reuniões. Tudo sozinho.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3" id="service-ai">
+        <div class="service-icon">🧠</div>
+        <h3>Agentes de IA Contextualizados</h3>
+        <p>Assistentes treinados com dados e contexto do seu negócio. Quanto mais usam, mais inteligentes ficam.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1" id="service-crm">
+        <div class="service-icon">📊</div>
+        <h3>CRM e Pipeline de Vendas</h3>
+        <p>Visualize seu funil, acompanhe cada lead e nunca mais perca uma oportunidade por falta de follow-up.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2" id="service-captacao">
+        <div class="service-icon">🎯</div>
+        <h3>Captação de Leads</h3>
+        <p>Funil completo: do anúncio à qualificação automática. Você recebe leads prontos para converter.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3" id="service-analytics">
+        <div class="service-icon">📈</div>
+        <h3>Analytics em Tempo Real</h3>
+        <p>Dashboard claro com as métricas que importam. Saiba exatamente o retorno de cada real investido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IDE / TECHNOLOGY ═══ -->
+<section class="ide-section" id="tecnologia">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Tecnologia</span>
+      <h2 class="section-title">Construído com código.<br><span class="gradient-text">Movido por inteligência.</span></h2>
+      <p class="section-subtitle">Não usamos templates genéricos. Cada sistema é construído sob medida para o seu negócio.</p>
+    </div>
+    <div class="ide-wrapper reveal">
+      <div class="ide-header">
+        <div class="ide-dots">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+        <div class="ide-tabs">
+          <div class="ide-tab active">expon.config.ts</div>
+          <div class="ide-tab">agent.ts</div>
+          <div class="ide-tab">analytics.ts</div>
+        </div>
+        <div class="ide-status">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          <span class="branch">main</span>
+        </div>
+      </div>
+      <div class="ide-body">
+        <div class="ide-sidebar">
+          <svg class="active-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12"/><path d="M18 9a3 3 0 1 0 0-6"/></svg>
+        </div>
+        <div class="ide-gutter" id="ide-gutter"></div>
+        <div class="ide-code" id="ide-code-content"></div>
+        <div class="ide-minimap">
+          <div class="minimap-line" style="width:70%"></div>
+          <div class="minimap-line highlight" style="width:90%"></div>
+          <div class="minimap-line" style="width:50%"></div>
+          <div class="minimap-line highlight" style="width:85%"></div>
+          <div class="minimap-line" style="width:60%"></div>
+          <div class="minimap-line" style="width:75%"></div>
+          <div class="minimap-line" style="width:40%"></div>
+          <div class="minimap-line highlight" style="width:95%"></div>
+          <div class="minimap-line" style="width:55%"></div>
+          <div class="minimap-line" style="width:80%"></div>
+          <div class="minimap-line" style="width:45%"></div>
+          <div class="minimap-line highlight" style="width:70%"></div>
+          <div class="minimap-line" style="width:60%"></div>
+          <div class="minimap-line" style="width:30%"></div>
+          <div class="minimap-line highlight" style="width:85%"></div>
+          <div class="minimap-line" style="width:50%"></div>
+          <div class="minimap-line" style="width:75%"></div>
+          <div class="minimap-line" style="width:65%"></div>
+          <div class="minimap-line" style="width:90%"></div>
+          <div class="minimap-line" style="width:40%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="process-section" id="como-funciona">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Processo</span>
+      <h2 class="section-title">Do diagnóstico ao resultado.<br><span class="gradient-text">Em 4 etapas.</span></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-line"></div>
+      <div class="process-step reveal reveal-delay-1" id="step-1">
+        <div class="step-number">01</div>
+        <h3>Diagnóstico</h3>
+        <p>Analisamos seu negócio, identificamos gargalos e oportunidades de crescimento com tecnologia.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2" id="step-2">
+        <div class="step-number">02</div>
+        <h3>Implementação</h3>
+        <p>Construímos seu sistema integrado: presença, automações, CRM e IA. Tudo conectado.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3" id="step-3">
+        <div class="step-number">03</div>
+        <h3>Ativação</h3>
+        <p>Seu sistema entra em operação. Leads chegam, atendimento automatiza, dados fluem.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4" id="step-4">
+        <div class="step-number">04</div>
+        <h3>Evolução</h3>
+        <p>O sistema aprende e melhora. Relatórios mensais, ajustes contínuos, crescimento constante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIFFERENTIALS ═══ -->
+<section class="diff-section" id="diferenciais">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Por que a Expon</span>
+      <h2 class="section-title">Não somos mais uma agência.<br><span class="gradient-text">Somos parte da sua operação.</span></h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-content reveal">
+        <ul class="diff-list">
+          <li>
+            <span class="diff-check">✓</span>
+            <div>
+              <strong>Sistema que aprende</strong>
+              <span>Base de conhecimento contextual que acumula dados e torna cada automação mais inteligente.</span>
+            </div>
+          </li>
+          <li>
+            <span class="diff-check">✓</span>
+            <div>
+              <strong>Tudo integrado</strong>
+              <span>Site, captação, WhatsApp, CRM, analytics. Um ecossistema completo, não peças soltas.</span>
+            </div>
+          </li>
+          <li>
+            <span class="diff-check">✓</span>
+            <div>
+              <strong>IA prática, não buzzword</strong>
+              <span>Usamos inteligência artificial para resolver problemas concretos: atendimento, qualificação e análise.</span>
+            </div>
+          </li>
+          <li>
+            <span class="diff-check">✓</span>
+            <div>
+              <strong>Transparência total</strong>
+              <span>Dashboard em tempo real. Você vê os números, não precisa confiar cegamente.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="diff-visual reveal reveal-delay-2">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1rem; color: var(--text-secondary);">Impacto médio nos primeiros 90 dias</h3>
+        <div class="metric-row">
+          <span class="metric-label">Leads gerados</span>
+          <div class="metric-bar"><div class="metric-fill" data-width="85%"></div></div>
+          <span class="metric-value">+185%</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Tempo de resposta</span>
+          <div class="metric-bar"><div class="metric-fill" data-width="92%"></div></div>
+          <span class="metric-value">-92%</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Taxa de conversão</span>
+          <div class="metric-bar"><div class="metric-fill" data-width="68%"></div></div>
+          <span class="metric-value">+68%</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Custo operacional</span>
+          <div class="metric-bar"><div class="metric-fill" data-width="45%"></div></div>
+          <span class="metric-value">-45%</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Satisfação cliente</span>
+          <div class="metric-bar"><div class="metric-fill" data-width="96%"></div></div>
+          <span class="metric-value">96%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Pronto para crescer <span class="gradient-text">de verdade</span>?</h2>
+      <p>Diagnóstico gratuito de 15 minutos. Mostramos exatamente onde sua empresa pode melhorar com tecnologia.</p>
+      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" class="btn-primary" id="cta-final-btn" style="position:relative;">
+        Quero meu diagnóstico gratuito
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Expon | Crescimento assistido por tecnologia</span>
+    <div class="footer-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Processo</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="https://wa.me/5500000000000" id="footer-whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
