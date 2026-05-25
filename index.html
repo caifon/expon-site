@@ -7,6 +7,49 @@
   <meta name="description" content="A Expon é a camada operacional inteligente que usa IA, automação e sistemas para fazer sua empresa crescer de forma estruturada e escalável.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- ═══ GOOGLE ANALYTICS 4 ═══ -->
+  <!-- AÇÃO NECESSÁRIA: Substitua G-XXXXXXXXXX pelo seu Measurement ID real (Google Analytics → Admin → Data Streams) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: 'Expon — Diagnóstico Gratuito',
+      send_page_view: true
+    });
+
+    // Eventos de engajamento
+    window.addEventListener('scroll', function() {
+      var scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent >= 75 && !window._scrollTracked75) {
+        window._scrollTracked75 = true;
+        gtag('event', 'scroll_75_percent', { event_category: 'Engajamento' });
+      }
+    });
+    setTimeout(function() {
+      gtag('event', 'time_60s', { event_category: 'Engajamento', event_label: '60 segundos na página' });
+    }, 60000);
+  </script>
+
+  <!-- ═══ META PIXEL ═══ -->
+  <!-- AÇÃO NECESSÁRIA: Substitua SEU_PIXEL_ID pelos números do seu Pixel (Meta Business Suite → Gerenciador de Eventos → Pixel) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
 </head>
 <body>
 
@@ -21,7 +64,8 @@
     <li><a href="#diferenciais">Diferenciais</a></li>
     <li><a href="#tecnologia">Tecnologia</a></li>
   </ul>
-  <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Expon" class="nav-cta" id="nav-cta-btn">Falar com a Expon</a>
+  <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Expon" class="nav-cta" id="nav-cta-btn"
+     onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'Navbar'}); fbq('track','Contact');">Falar com a Expon</a>
   <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -47,11 +91,14 @@
       fazer seu negócio crescer de verdade. Sem complicação, com resultado.
     </p>
     <div class="hero-buttons">
-      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagnóstico%20gratuito" class="btn-primary" id="hero-cta-primary">
+      <!-- AÇÃO NECESSÁRIA: Substitua 5500000000000 pelo seu número de WhatsApp Business (55 + DDD + número) -->
+      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagn%C3%B3stico%20gratuito" class="btn-primary" id="hero-cta-primary"
+         onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'Hero Principal'}); fbq('track','Contact');">
         Diagnóstico Gratuito
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#tecnologia" class="btn-secondary" id="hero-cta-secondary">
+      <a href="#tecnologia" class="btn-secondary" id="hero-cta-secondary"
+         onclick="gtag('event','ver_tecnologia_click',{event_category:'Engajamento'});">
         Ver Tecnologia
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </a>
@@ -295,7 +342,8 @@
     <div class="cta-box reveal">
       <h2>Pronto para crescer <span class="gradient-text">de verdade</span>?</h2>
       <p>Diagnóstico gratuito de 15 minutos. Mostramos exatamente onde sua empresa pode melhorar com tecnologia.</p>
-      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" class="btn-primary" id="cta-final-btn" style="position:relative;">
+      <a href="https://wa.me/5500000000000?text=Quero%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa" class="btn-primary" id="cta-final-btn" style="position:relative;"
+         onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'CTA Final'}); fbq('track','Lead');">
         Quero meu diagnóstico gratuito
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -311,7 +359,8 @@
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Processo</a>
       <a href="#diferenciais">Diferenciais</a>
-      <a href="https://wa.me/5500000000000" id="footer-whatsapp">WhatsApp</a>
+      <a href="https://wa.me/5500000000000" id="footer-whatsapp"
+         onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'Footer'}); fbq('track','Contact');">WhatsApp</a>
     </div>
   </div>
 </footer>
